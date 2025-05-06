@@ -42,14 +42,14 @@ export namespace $Enums {
 export type UserRole = (typeof UserRole)[keyof typeof UserRole]
 
 
-export const AutMethod: {
+export const AuthMethod: {
   CREDENIALS: 'CREDENIALS',
   GOOGLE: 'GOOGLE',
   YANDEX: 'YANDEX',
   EMAIL: 'EMAIL'
 };
 
-export type AutMethod = (typeof AutMethod)[keyof typeof AutMethod]
+export type AuthMethod = (typeof AuthMethod)[keyof typeof AuthMethod]
 
 
 export const TokenType: {
@@ -66,9 +66,9 @@ export type UserRole = $Enums.UserRole
 
 export const UserRole: typeof $Enums.UserRole
 
-export type AutMethod = $Enums.AutMethod
+export type AuthMethod = $Enums.AuthMethod
 
-export const AutMethod: typeof $Enums.AutMethod
+export const AuthMethod: typeof $Enums.AuthMethod
 
 export type TokenType = $Enums.TokenType
 
@@ -1143,7 +1143,7 @@ export namespace Prisma {
     username: string | null
     picture: string | null
     role: $Enums.UserRole | null
-    method: $Enums.AutMethod | null
+    method: $Enums.AuthMethod | null
     isVerified: boolean | null
     isTwoFactorEnabled: boolean | null
     createdAt: Date | null
@@ -1157,7 +1157,7 @@ export namespace Prisma {
     username: string | null
     picture: string | null
     role: $Enums.UserRole | null
-    method: $Enums.AutMethod | null
+    method: $Enums.AuthMethod | null
     isVerified: boolean | null
     isTwoFactorEnabled: boolean | null
     createdAt: Date | null
@@ -1302,7 +1302,7 @@ export namespace Prisma {
     username: string
     picture: string | null
     role: $Enums.UserRole
-    method: $Enums.AutMethod
+    method: $Enums.AuthMethod
     isVerified: boolean
     isTwoFactorEnabled: boolean
     createdAt: Date
@@ -1404,7 +1404,7 @@ export namespace Prisma {
       username: string
       picture: string | null
       role: $Enums.UserRole
-      method: $Enums.AutMethod
+      method: $Enums.AuthMethod
       isVerified: boolean
       isTwoFactorEnabled: boolean
       createdAt: Date
@@ -1839,7 +1839,7 @@ export namespace Prisma {
     readonly username: FieldRef<"User", 'String'>
     readonly picture: FieldRef<"User", 'String'>
     readonly role: FieldRef<"User", 'UserRole'>
-    readonly method: FieldRef<"User", 'AutMethod'>
+    readonly method: FieldRef<"User", 'AuthMethod'>
     readonly isVerified: FieldRef<"User", 'Boolean'>
     readonly isTwoFactorEnabled: FieldRef<"User", 'Boolean'>
     readonly createdAt: FieldRef<"User", 'DateTime'>
@@ -4561,16 +4561,16 @@ export namespace Prisma {
 
 
   /**
-   * Reference to a field of type 'AutMethod'
+   * Reference to a field of type 'AuthMethod'
    */
-  export type EnumAutMethodFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'AutMethod'>
+  export type EnumAuthMethodFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'AuthMethod'>
     
 
 
   /**
-   * Reference to a field of type 'AutMethod[]'
+   * Reference to a field of type 'AuthMethod[]'
    */
-  export type ListEnumAutMethodFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'AutMethod[]'>
+  export type ListEnumAuthMethodFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'AuthMethod[]'>
     
 
 
@@ -4650,7 +4650,7 @@ export namespace Prisma {
     username?: StringFilter<"User"> | string
     picture?: StringNullableFilter<"User"> | string | null
     role?: EnumUserRoleFilter<"User"> | $Enums.UserRole
-    method?: EnumAutMethodFilter<"User"> | $Enums.AutMethod
+    method?: EnumAuthMethodFilter<"User"> | $Enums.AuthMethod
     isVerified?: BoolFilter<"User"> | boolean
     isTwoFactorEnabled?: BoolFilter<"User"> | boolean
     createdAt?: DateTimeFilter<"User"> | Date | string
@@ -4683,7 +4683,7 @@ export namespace Prisma {
     password?: StringFilter<"User"> | string
     picture?: StringNullableFilter<"User"> | string | null
     role?: EnumUserRoleFilter<"User"> | $Enums.UserRole
-    method?: EnumAutMethodFilter<"User"> | $Enums.AutMethod
+    method?: EnumAuthMethodFilter<"User"> | $Enums.AuthMethod
     isVerified?: BoolFilter<"User"> | boolean
     isTwoFactorEnabled?: BoolFilter<"User"> | boolean
     createdAt?: DateTimeFilter<"User"> | Date | string
@@ -4718,7 +4718,7 @@ export namespace Prisma {
     username?: StringWithAggregatesFilter<"User"> | string
     picture?: StringNullableWithAggregatesFilter<"User"> | string | null
     role?: EnumUserRoleWithAggregatesFilter<"User"> | $Enums.UserRole
-    method?: EnumAutMethodWithAggregatesFilter<"User"> | $Enums.AutMethod
+    method?: EnumAuthMethodWithAggregatesFilter<"User"> | $Enums.AuthMethod
     isVerified?: BoolWithAggregatesFilter<"User"> | boolean
     isTwoFactorEnabled?: BoolWithAggregatesFilter<"User"> | boolean
     createdAt?: DateTimeWithAggregatesFilter<"User"> | Date | string
@@ -4866,7 +4866,7 @@ export namespace Prisma {
     username: string
     picture?: string | null
     role?: $Enums.UserRole
-    method: $Enums.AutMethod
+    method: $Enums.AuthMethod
     isVerified?: boolean
     isTwoFactorEnabled?: boolean
     createdAt?: Date | string
@@ -4881,7 +4881,7 @@ export namespace Prisma {
     username: string
     picture?: string | null
     role?: $Enums.UserRole
-    method: $Enums.AutMethod
+    method: $Enums.AuthMethod
     isVerified?: boolean
     isTwoFactorEnabled?: boolean
     createdAt?: Date | string
@@ -4896,7 +4896,7 @@ export namespace Prisma {
     username?: StringFieldUpdateOperationsInput | string
     picture?: NullableStringFieldUpdateOperationsInput | string | null
     role?: EnumUserRoleFieldUpdateOperationsInput | $Enums.UserRole
-    method?: EnumAutMethodFieldUpdateOperationsInput | $Enums.AutMethod
+    method?: EnumAuthMethodFieldUpdateOperationsInput | $Enums.AuthMethod
     isVerified?: BoolFieldUpdateOperationsInput | boolean
     isTwoFactorEnabled?: BoolFieldUpdateOperationsInput | boolean
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
@@ -4911,7 +4911,7 @@ export namespace Prisma {
     username?: StringFieldUpdateOperationsInput | string
     picture?: NullableStringFieldUpdateOperationsInput | string | null
     role?: EnumUserRoleFieldUpdateOperationsInput | $Enums.UserRole
-    method?: EnumAutMethodFieldUpdateOperationsInput | $Enums.AutMethod
+    method?: EnumAuthMethodFieldUpdateOperationsInput | $Enums.AuthMethod
     isVerified?: BoolFieldUpdateOperationsInput | boolean
     isTwoFactorEnabled?: BoolFieldUpdateOperationsInput | boolean
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
@@ -4926,7 +4926,7 @@ export namespace Prisma {
     username: string
     picture?: string | null
     role?: $Enums.UserRole
-    method: $Enums.AutMethod
+    method: $Enums.AuthMethod
     isVerified?: boolean
     isTwoFactorEnabled?: boolean
     createdAt?: Date | string
@@ -4940,7 +4940,7 @@ export namespace Prisma {
     username?: StringFieldUpdateOperationsInput | string
     picture?: NullableStringFieldUpdateOperationsInput | string | null
     role?: EnumUserRoleFieldUpdateOperationsInput | $Enums.UserRole
-    method?: EnumAutMethodFieldUpdateOperationsInput | $Enums.AutMethod
+    method?: EnumAuthMethodFieldUpdateOperationsInput | $Enums.AuthMethod
     isVerified?: BoolFieldUpdateOperationsInput | boolean
     isTwoFactorEnabled?: BoolFieldUpdateOperationsInput | boolean
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
@@ -4954,7 +4954,7 @@ export namespace Prisma {
     username?: StringFieldUpdateOperationsInput | string
     picture?: NullableStringFieldUpdateOperationsInput | string | null
     role?: EnumUserRoleFieldUpdateOperationsInput | $Enums.UserRole
-    method?: EnumAutMethodFieldUpdateOperationsInput | $Enums.AutMethod
+    method?: EnumAuthMethodFieldUpdateOperationsInput | $Enums.AuthMethod
     isVerified?: BoolFieldUpdateOperationsInput | boolean
     isTwoFactorEnabled?: BoolFieldUpdateOperationsInput | boolean
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
@@ -5144,11 +5144,11 @@ export namespace Prisma {
     not?: NestedEnumUserRoleFilter<$PrismaModel> | $Enums.UserRole
   }
 
-  export type EnumAutMethodFilter<$PrismaModel = never> = {
-    equals?: $Enums.AutMethod | EnumAutMethodFieldRefInput<$PrismaModel>
-    in?: $Enums.AutMethod[] | ListEnumAutMethodFieldRefInput<$PrismaModel>
-    notIn?: $Enums.AutMethod[] | ListEnumAutMethodFieldRefInput<$PrismaModel>
-    not?: NestedEnumAutMethodFilter<$PrismaModel> | $Enums.AutMethod
+  export type EnumAuthMethodFilter<$PrismaModel = never> = {
+    equals?: $Enums.AuthMethod | EnumAuthMethodFieldRefInput<$PrismaModel>
+    in?: $Enums.AuthMethod[] | ListEnumAuthMethodFieldRefInput<$PrismaModel>
+    notIn?: $Enums.AuthMethod[] | ListEnumAuthMethodFieldRefInput<$PrismaModel>
+    not?: NestedEnumAuthMethodFilter<$PrismaModel> | $Enums.AuthMethod
   }
 
   export type BoolFilter<$PrismaModel = never> = {
@@ -5270,14 +5270,14 @@ export namespace Prisma {
     _max?: NestedEnumUserRoleFilter<$PrismaModel>
   }
 
-  export type EnumAutMethodWithAggregatesFilter<$PrismaModel = never> = {
-    equals?: $Enums.AutMethod | EnumAutMethodFieldRefInput<$PrismaModel>
-    in?: $Enums.AutMethod[] | ListEnumAutMethodFieldRefInput<$PrismaModel>
-    notIn?: $Enums.AutMethod[] | ListEnumAutMethodFieldRefInput<$PrismaModel>
-    not?: NestedEnumAutMethodWithAggregatesFilter<$PrismaModel> | $Enums.AutMethod
+  export type EnumAuthMethodWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: $Enums.AuthMethod | EnumAuthMethodFieldRefInput<$PrismaModel>
+    in?: $Enums.AuthMethod[] | ListEnumAuthMethodFieldRefInput<$PrismaModel>
+    notIn?: $Enums.AuthMethod[] | ListEnumAuthMethodFieldRefInput<$PrismaModel>
+    not?: NestedEnumAuthMethodWithAggregatesFilter<$PrismaModel> | $Enums.AuthMethod
     _count?: NestedIntFilter<$PrismaModel>
-    _min?: NestedEnumAutMethodFilter<$PrismaModel>
-    _max?: NestedEnumAutMethodFilter<$PrismaModel>
+    _min?: NestedEnumAuthMethodFilter<$PrismaModel>
+    _max?: NestedEnumAuthMethodFilter<$PrismaModel>
   }
 
   export type BoolWithAggregatesFilter<$PrismaModel = never> = {
@@ -5448,8 +5448,8 @@ export namespace Prisma {
     set?: $Enums.UserRole
   }
 
-  export type EnumAutMethodFieldUpdateOperationsInput = {
-    set?: $Enums.AutMethod
+  export type EnumAuthMethodFieldUpdateOperationsInput = {
+    set?: $Enums.AuthMethod
   }
 
   export type BoolFieldUpdateOperationsInput = {
@@ -5551,11 +5551,11 @@ export namespace Prisma {
     not?: NestedEnumUserRoleFilter<$PrismaModel> | $Enums.UserRole
   }
 
-  export type NestedEnumAutMethodFilter<$PrismaModel = never> = {
-    equals?: $Enums.AutMethod | EnumAutMethodFieldRefInput<$PrismaModel>
-    in?: $Enums.AutMethod[] | ListEnumAutMethodFieldRefInput<$PrismaModel>
-    notIn?: $Enums.AutMethod[] | ListEnumAutMethodFieldRefInput<$PrismaModel>
-    not?: NestedEnumAutMethodFilter<$PrismaModel> | $Enums.AutMethod
+  export type NestedEnumAuthMethodFilter<$PrismaModel = never> = {
+    equals?: $Enums.AuthMethod | EnumAuthMethodFieldRefInput<$PrismaModel>
+    in?: $Enums.AuthMethod[] | ListEnumAuthMethodFieldRefInput<$PrismaModel>
+    notIn?: $Enums.AuthMethod[] | ListEnumAuthMethodFieldRefInput<$PrismaModel>
+    not?: NestedEnumAuthMethodFilter<$PrismaModel> | $Enums.AuthMethod
   }
 
   export type NestedBoolFilter<$PrismaModel = never> = {
@@ -5640,14 +5640,14 @@ export namespace Prisma {
     _max?: NestedEnumUserRoleFilter<$PrismaModel>
   }
 
-  export type NestedEnumAutMethodWithAggregatesFilter<$PrismaModel = never> = {
-    equals?: $Enums.AutMethod | EnumAutMethodFieldRefInput<$PrismaModel>
-    in?: $Enums.AutMethod[] | ListEnumAutMethodFieldRefInput<$PrismaModel>
-    notIn?: $Enums.AutMethod[] | ListEnumAutMethodFieldRefInput<$PrismaModel>
-    not?: NestedEnumAutMethodWithAggregatesFilter<$PrismaModel> | $Enums.AutMethod
+  export type NestedEnumAuthMethodWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: $Enums.AuthMethod | EnumAuthMethodFieldRefInput<$PrismaModel>
+    in?: $Enums.AuthMethod[] | ListEnumAuthMethodFieldRefInput<$PrismaModel>
+    notIn?: $Enums.AuthMethod[] | ListEnumAuthMethodFieldRefInput<$PrismaModel>
+    not?: NestedEnumAuthMethodWithAggregatesFilter<$PrismaModel> | $Enums.AuthMethod
     _count?: NestedIntFilter<$PrismaModel>
-    _min?: NestedEnumAutMethodFilter<$PrismaModel>
-    _max?: NestedEnumAutMethodFilter<$PrismaModel>
+    _min?: NestedEnumAuthMethodFilter<$PrismaModel>
+    _max?: NestedEnumAuthMethodFilter<$PrismaModel>
   }
 
   export type NestedBoolWithAggregatesFilter<$PrismaModel = never> = {
@@ -5786,7 +5786,7 @@ export namespace Prisma {
     username: string
     picture?: string | null
     role?: $Enums.UserRole
-    method: $Enums.AutMethod
+    method: $Enums.AuthMethod
     isVerified?: boolean
     isTwoFactorEnabled?: boolean
     createdAt?: Date | string
@@ -5800,7 +5800,7 @@ export namespace Prisma {
     username: string
     picture?: string | null
     role?: $Enums.UserRole
-    method: $Enums.AutMethod
+    method: $Enums.AuthMethod
     isVerified?: boolean
     isTwoFactorEnabled?: boolean
     createdAt?: Date | string
@@ -5830,7 +5830,7 @@ export namespace Prisma {
     username?: StringFieldUpdateOperationsInput | string
     picture?: NullableStringFieldUpdateOperationsInput | string | null
     role?: EnumUserRoleFieldUpdateOperationsInput | $Enums.UserRole
-    method?: EnumAutMethodFieldUpdateOperationsInput | $Enums.AutMethod
+    method?: EnumAuthMethodFieldUpdateOperationsInput | $Enums.AuthMethod
     isVerified?: BoolFieldUpdateOperationsInput | boolean
     isTwoFactorEnabled?: BoolFieldUpdateOperationsInput | boolean
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
@@ -5844,7 +5844,7 @@ export namespace Prisma {
     username?: StringFieldUpdateOperationsInput | string
     picture?: NullableStringFieldUpdateOperationsInput | string | null
     role?: EnumUserRoleFieldUpdateOperationsInput | $Enums.UserRole
-    method?: EnumAutMethodFieldUpdateOperationsInput | $Enums.AutMethod
+    method?: EnumAuthMethodFieldUpdateOperationsInput | $Enums.AuthMethod
     isVerified?: BoolFieldUpdateOperationsInput | boolean
     isTwoFactorEnabled?: BoolFieldUpdateOperationsInput | boolean
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string

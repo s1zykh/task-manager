@@ -20,7 +20,7 @@ model User {
 
   role UserRole @default(OWNER)
 
-  method AutMethod
+  method AuthMethod
 
   accounts Account[]
 
@@ -73,7 +73,7 @@ enum UserRole {
   WORKER
 }
 
-enum AutMethod {
+enum AuthMethod {
   CREDENIALS
   GOOGLE
   YANDEX
