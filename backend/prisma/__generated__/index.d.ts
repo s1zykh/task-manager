@@ -43,7 +43,7 @@ export type UserRole = (typeof UserRole)[keyof typeof UserRole]
 
 
 export const AuthMethod: {
-  CREDENIALS: 'CREDENIALS',
+  CREDENTIALS: 'CREDENTIALS',
   GOOGLE: 'GOOGLE',
   YANDEX: 'YANDEX',
   EMAIL: 'EMAIL'

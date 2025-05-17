@@ -176,7 +176,7 @@ exports.UserRole = exports.$Enums.UserRole = {
 };
 
 exports.AuthMethod = exports.$Enums.AuthMethod = {
-  CREDENIALS: 'CREDENIALS',
+  CREDENTIALS: 'CREDENTIALS',
   GOOGLE: 'GOOGLE',
   YANDEX: 'YANDEX',
   EMAIL: 'EMAIL'
