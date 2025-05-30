@@ -42,8 +42,6 @@ export class AuthService {
 			false
 		)
 
-		// await this.emailConfirmationService.sendVerificationToken(newUser.email)
-
 		return newUser
 	}
 
@@ -63,7 +61,6 @@ export class AuthService {
 				'Неверный пароль. Пожалуйста, попробуйте еще раз или восстановите пароль, если забыли его.'
 			)
 		}
-
 		return this.saveSession(req, user)
 	}
 

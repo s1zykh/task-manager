@@ -29,7 +29,8 @@ export default tseslint.config(
 			'@typescript-eslint/no-explicit-any': 'off',
 			'@typescript-eslint/no-floating-promises': 'warn',
 			'@typescript-eslint/no-unsafe-argument': 'warn',
-			'@typescript-eslint/prefer-promise-reject-errors': 'off'
+			'@typescript-eslint/prefer-promise-reject-errors': 'off',
+			'@typescript-eslint/require-await': 'off'
 		}
 	}
 )
