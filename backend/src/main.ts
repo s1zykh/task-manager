@@ -19,12 +19,6 @@ async function bootstrap() {
 
 	app.use(cookieParser(config.getOrThrow<string>('COOKIES_SECRET')))
 
-	app.useGlobalPipes(
-		new ValidationPipe({
-			transform: true
-		})
-	)
-
 	app.use(
 		session({
 			store: new RedisStore({
@@ -46,6 +40,12 @@ async function bootstrap() {
 				),
 				sameSite: 'lax'
 			}
+		})
+	)
+
+	app.useGlobalPipes(
+		new ValidationPipe({
+			transform: true
 		})
 	)
 

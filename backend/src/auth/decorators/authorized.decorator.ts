@@ -1,6 +1,5 @@
 import { createParamDecorator, ExecutionContext } from '@nestjs/common'
 import { User } from '@prisma/__generated__'
-import { Request } from 'express'
 
 import { AuthenticatedRequest } from '../utils/types'
 

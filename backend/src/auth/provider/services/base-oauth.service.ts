@@ -83,8 +83,8 @@ export class BaseOAuthService {
 			)
 		}
 
-		const user = (await userRequest.json()) as TypeUserInfo
-		const userData = await this.extractUserInfo(user)
+		const userData = (await userRequest.json()) as TypeUserInfo
+		// const userData = await this.extractUserInfo(user)
 
 		return {
 			...userData,

@@ -2,7 +2,6 @@ export function parseBoolean(value: string): boolean {
 	if (typeof value === 'boolean') {
 		return value
 	}
-
 	if (typeof value === 'string') {
 		const lowerValue = value.trim().toLowerCase()
 		if (lowerValue === 'true') {
@@ -12,7 +11,6 @@ export function parseBoolean(value: string): boolean {
 			return false
 		}
 	}
-
 	throw new Error(
 		`Не удалось преобразовать значение "${value}" в логическое значение.`
 	)
