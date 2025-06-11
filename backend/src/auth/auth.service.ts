@@ -15,6 +15,7 @@ import { UserService } from '@/user/user.service'
 
 import { LoginDto } from './dto/login.dto'
 import { RegisterDto } from './dto/register.dto'
+import { EmailConfirmationService } from './email-confirmation/email-confirmation.service'
 import { ProviderService } from './provider/provider.service'
 import { TypeUserInfo } from './provider/services/types/user-info.types'
 
@@ -24,7 +25,8 @@ export class AuthService {
 		private readonly prismaService: PrismaService,
 		private readonly userService: UserService,
 		private readonly configService: ConfigService,
-		private readonly providerService: ProviderService
+		private readonly providerService: ProviderService,
+		private readonly emailConfirmationService: EmailConfirmationService
 	) {}
 
 	public async register(dto: RegisterDto) {
@@ -45,7 +47,12 @@ export class AuthService {
 			false
 		)
 
-		return newUser
+		await this.emailConfirmationService.sendVerificationToken(newUser.email)
+
+		return {
+			message:
+				'Вы успешно зарегистрировались. Пожалуйста, подтвердите Ваш email!'
+		}
 	}
 
 	public async login(req: Request, dto: LoginDto) {
