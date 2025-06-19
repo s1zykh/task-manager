@@ -18,6 +18,7 @@ import { RegisterDto } from './dto/register.dto'
 import { EmailConfirmationService } from './email-confirmation/email-confirmation.service'
 import { ProviderService } from './provider/provider.service'
 import { TypeUserInfo } from './provider/services/types/user-info.types'
+import { TwoFactorAuthService } from './two-factor-auth/two-factor-auth.service'
 
 @Injectable()
 export class AuthService {
@@ -26,7 +27,8 @@ export class AuthService {
 		private readonly userService: UserService,
 		private readonly configService: ConfigService,
 		private readonly providerService: ProviderService,
-		private readonly emailConfirmationService: EmailConfirmationService
+		private readonly emailConfirmationService: EmailConfirmationService,
+		private readonly twoFactorAuthService: TwoFactorAuthService
 	) {}
 
 	public async register(dto: RegisterDto) {
@@ -71,6 +73,23 @@ export class AuthService {
 				'Неверный пароль. Пожалуйста, попробуйте еще раз или восстановите пароль, если забыли его.'
 			)
 		}
+
+		if (user.isTwoFactorEnabled) {
+			if (!dto.code) {
+				await this.twoFactorAuthService.sendTwoFactorToken(user.email)
+
+				return {
+					message:
+						'Проверьте вашу почту. Требуется код двухфакторной аутентификации.'
+				}
+			}
+
+			await this.twoFactorAuthService.validateTwoFactorToken(
+				user.email,
+				dto.code
+			)
+		}
+
 		return this.saveSession(req, user)
 	}
 
