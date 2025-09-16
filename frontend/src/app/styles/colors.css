@@ -1,0 +1,54 @@
+:root {
+	/*orange*/
+	--color-orange-primary: rgb(250, 100, 0);
+	--color-orange-secondary: rgb(255, 106, 19);
+	/* --color-orange: #ff6a13;
+    --color-orange-hover: #f25900;
+    --color-orange-v1: #FA6400;
+    --color-orange: #fa6400;
+    --color-orange-01: #f25900;
+    --color-orange-02: #e85500;
+    --color-orange-outline: rgba(250, 100, 0, .22);
+    --color-orange-light: #ff6a13;
+    --color-orange-lighter: #FFF0E6;
+    --color-orange-v1-rgba: 250, 100, 0;
+    --color-orange-v1-50: rgba(var(--const-orange-v1-rgba), .5);
+    --color-orange: #fa6400;
+    --color-orange-01: #f25900;
+    --color-orange-02: #e85500;
+    --color-orange-outline: rgba(250, 100, 0, .22);
+    --color-orange-light: #ff6a13;
+    --color-orange-lighter: #FFF0E6; */
+
+	/*green*/
+	--color-green: #44ca17;
+	/* --color-green: rgb(74, 186, 36);
+    --color-green: #4aba24; */
+	--color-green-light: #53cf28;
+	--color-green-bright: #44ca17;
+	/* --color-green: #398f1c; */
+
+	--color-red: #e02020;
+
+	--color-gray: #474853;
+	--color-gray-v10: #000015;
+	--color-gray-v10-rgba: 0, 0, 21;
+	--color-gray-v9: #161616;
+	--color-gray-dark: #161616;
+	--color-gray-light: rgb(175, 175, 181);
+	--color-gray-lighter: rgb(237, 236, 236);
+	--color-gray-3: rgb(245, 246, 248);
+
+	--color-white: rgb(255, 255, 255);
+
+	--color-black: #000;
+
+	--color-pink: #fdeded;
+	--color-pink-light: rgb(253, 237, 237);
+
+	--color-blue-main: #3b40a5;
+	--color-blue: #23277b;
+	--color-blue-light: rgba(141, 151, 211, 1);
+	--color-blue-light-rgba: rgba(141, 151, 211, 0.15);
+	--color-blue-lighter: #eff5ff;
+}

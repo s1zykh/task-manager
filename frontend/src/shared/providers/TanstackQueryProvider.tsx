@@ -7,13 +7,14 @@ export function TanstackQueryProvider({
 	children
 }: PropsWithChildren<unknown>) {
 	const [client] = useState(
-		new QueryClient({
-			defaultOptions: {
-				queries: {
-					refetchOnWindowFocus: false
+		() =>
+			new QueryClient({
+				defaultOptions: {
+					queries: {
+						refetchOnWindowFocus: false
+					}
 				}
-			}
-		})
+			})
 	)
 
 	return <QueryClientProvider client={client}>{children}</QueryClientProvider>

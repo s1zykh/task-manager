@@ -1,7 +1,7 @@
 const interfaceConst = 'interface'
 
 module.exports = (componentName) => `import clsx from 'clsx';
-import cls from './${componentName}.module.scss';
+import cls from './${componentName}.module.css';
 
 ${interfaceConst} ${componentName}Props {
     className?: string;
